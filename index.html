@@ -9,12 +9,12 @@
 <meta property="og:title" content="AutonomousIT Helpdesk – Self-Healing IT Support">
 <meta property="og:description" content="Watch how tickets are triaged, resolved and escalated autonomously. By Mahendran Varadharajan.">
 <meta property="og:url" content="https://smartitbudget.github.io/autonomousIT-helpdesk">
-<meta property="og:image" content="https://smartitbudget.github.io/autonomousIT-helpdesk/cover.png">
-<meta property="og:image:width" content="1280"><meta property="og:image:height" content="720">
+<meta property="og:image" content="https://smartitbudget.github.io/autonomousIT-helpdesk/share-card.png">
+<meta property="og:image:secure_url" content="https://smartitbudget.github.io/autonomousIT-helpdesk/share-card.png"><meta property="og:image:type" content="image/png"><meta property="og:image:alt" content="AutonomousIT Helpdesk – self-healing IT service desk: 70% auto-resolved, 24/7, ~90s fixes"><link rel="image_src" href="https://smartitbudget.github.io/autonomousIT-helpdesk/share-card.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="627">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="AutonomousIT Helpdesk – Self-Healing IT Support">
 <meta name="twitter:description" content="AI-driven IT service desk, explained visually.">
-<meta name="twitter:image" content="https://smartitbudget.github.io/autonomousIT-helpdesk/cover.png">
+<meta name="twitter:image" content="https://smartitbudget.github.io/autonomousIT-helpdesk/share-card.png">
 <style>
 :root{--bg:#f6f8fc;--ink:#0f1b33;--mut:#5b6b88;--a:#2563eb;--b:#06b6d4;--g:#10b981;--o:#f59e0b;--bd:#e3e9f4}
 *{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:70px}
@@ -108,7 +108,7 @@ footer{text-align:center;color:var(--mut);font-size:12px;padding:30px}
 <div class="cta">
 <a class="reach" target="_blank" rel="noopener" href="https://www.linkedin.com/in/mahendranvaradharajan/"><em>👋 Reach me here</em><div class="pin">in</div><div><b>LinkedIn – Mahendran Varadharajan</b><small>linkedin.com/in/mahendranvaradharajan</small></div></a>
 <a class="reach s" target="_blank" rel="noopener" href="https://www.scribd.com/document/1094326085/Mahendran-Varadharajan-Resume-pdf"><em>📄 View my resume</em><div class="pin">S</div><div><b>Resume on Scribd</b><small>scribd.com/document/1094326085/Mahendran-Varadharajan-Resume-pdf</small></div></a></div>
-<h2 style="margin:34px 0 12px;font-size:22px">Share this page everywhere</h2><div class="share" id="share"></div></section>
+<h2 style="margin:34px 0 12px;font-size:22px">Share this page everywhere</h2><img src="share-card.png" alt="Share preview" style="width:100%;max-width:520px;border-radius:16px;border:1px solid var(--bd);margin-bottom:14px;box-shadow:0 8px 24px #1e3a8a1a"><br><div class="share" id="share"></div></section>
 <footer>© AutonomousIT Helpdesk · Mahendran Varadharajan · smartitbudget.github.io/autonomousIT-helpdesk</footer>
 <button id="fab" title="Share">📤</button><div id="toast"></div>
 <script>
@@ -130,9 +130,9 @@ const CV=[["Identity","🔐","Identity & access","Password resets, MFA re-enrolm
 ["All","Identity","Endpoint","Cloud","Network"].forEach((c,i)=>{const b=document.createElement('button');b.className="chip"+(i?"":" on");b.textContent=c;b.onclick=()=>{[...flt.children].forEach(x=>x.classList.toggle('on',x==b));cov.innerHTML=CV.filter(v=>c=="All"||v[0]==c).map(v=>`<div class="card"><div class="ic">${v[1]}</div><h3>${v[2]}</h3><p>${v[3]}</p></div>`).join('')};flt.appendChild(b)});flt.firstChild.click();
 function calc(){const t=+s1.value,c=+s2.value,r=+s3.value/100;v1.textContent=t;v2.textContent=c;v3.textContent=s3.value;const n=Math.round(t*r);o1.textContent="$"+Math.round(n*c*.9).toLocaleString();o2.textContent=n.toLocaleString();o3.textContent=Math.round(n/6).toLocaleString()+" h"}
 [s1,s2,s3].forEach(s=>s.oninput=calc);calc();
-const SH=[["LinkedIn","#0a66c2",(u)=>"https://www.linkedin.com/sharing/share-offsite/?url="+u],["X / Twitter","#111",(u,t)=>"https://twitter.com/intent/tweet?url="+u+"&text="+t],["Facebook","#1877f2",u=>"https://www.facebook.com/sharer/sharer.php?u="+u],["WhatsApp","#25d366",(u,t)=>"https://wa.me/?text="+t+"%20"+u],["Telegram","#229ed9",(u,t)=>"https://t.me/share/url?url="+u+"&text="+t],["Reddit","#ff4500",(u,t)=>"https://www.reddit.com/submit?url="+u+"&title="+t],["Pinterest","#e60023",(u,t)=>"https://pinterest.com/pin/create/button/?url="+u+"&description="+t+"&media="+encodeURIComponent(U+"/cover.png")],["Email","#6b7280",(u,t)=>"mailto:?subject="+t+"&body="+u]];
+const SH=[["LinkedIn","#0a66c2",(u)=>"https://www.linkedin.com/sharing/share-offsite/?url="+u],["X / Twitter","#111",(u,t)=>"https://twitter.com/intent/tweet?url="+u+"&text="+t],["Facebook","#1877f2",u=>"https://www.facebook.com/sharer/sharer.php?u="+u],["WhatsApp","#25d366",(u,t)=>"https://wa.me/?text="+t+"%20"+u],["Telegram","#229ed9",(u,t)=>"https://t.me/share/url?url="+u+"&text="+t],["Reddit","#ff4500",(u,t)=>"https://www.reddit.com/submit?url="+u+"&title="+t],["Pinterest","#e60023",(u,t)=>"https://pinterest.com/pin/create/button/?url="+u+"&description="+t+"&media="+encodeURIComponent(U+"/share-card.png")],["Email","#6b7280",(u,t)=>"mailto:?subject="+t+"&body="+u]];
 const eu=encodeURIComponent(U),et=encodeURIComponent(T);SH.forEach(([n,c,f])=>share.insertAdjacentHTML('beforeend',`<a style="background:${c}" target="_blank" rel="noopener" href="${f(eu,et)}">${n}</a>`));
-async function ns(){if(navigator.share){try{await navigator.share({title:T,text:X,url:U})}catch(e){}}else{navigator.clipboard&&navigator.clipboard.writeText(U);toast("GitHub page link copied")}}
-share.insertAdjacentHTML('afterbegin','<button id="nb" style="background:var(--a)">📤 Share (all apps)</button>');nb.onclick=ns;fab.onclick=ns;
+async function ns(){if(navigator.share){try{let d={title:T,text:X,url:U};try{const r=await fetch('share-card.png'),f=new File([await r.blob()],'AutonomousIT-Helpdesk.png',{type:'image/png'});if(navigator.canShare&&navigator.canShare({files:[f]}))d.files=[f]}catch(e){}await navigator.share(d)}catch(e){}}else{navigator.clipboard&&navigator.clipboard.writeText(U);toast("GitHub page link copied")}}
+share.insertAdjacentHTML('afterbegin','<button id="nb" style="background:var(--a)">📤 Share (all apps)</button><a style="background:var(--ink)" href="share-card.png" download="AutonomousIT-Helpdesk.png">🖼️ Download share image</a>');nb.onclick=ns;fab.onclick=ns;
 function toast(m){toast_.textContent=m;toast_.style.opacity=1;setTimeout(()=>toast_.style.opacity=0,1800)}const toast_=document.getElementById('toast');
 </script></body></html>
