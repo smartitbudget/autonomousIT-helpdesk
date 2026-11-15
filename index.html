@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AutonomousIT Helpdesk – Self-Healing IT Support by Mahendran Varadharajan</title>
+<meta name="description" content="AutonomousIT Helpdesk: an AI-driven, self-healing IT service desk that triages, resolves and escalates tickets automatically. Built by Mahendran Varadharajan.">
+<link rel="canonical" href="https://smartitbudget.github.io/autonomousIT-helpdesk">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SmartITBudget">
+<meta property="og:title" content="AutonomousIT Helpdesk – Self-Healing IT Support">
+<meta property="og:description" content="Watch how tickets are triaged, resolved and escalated autonomously. By Mahendran Varadharajan.">
+<meta property="og:url" content="https://smartitbudget.github.io/autonomousIT-helpdesk">
+<meta property="og:image" content="https://smartitbudget.github.io/autonomousIT-helpdesk/cover.png">
+<meta property="og:image:width" content="1280"><meta property="og:image:height" content="720">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AutonomousIT Helpdesk – Self-Healing IT Support">
+<meta name="twitter:description" content="AI-driven IT service desk, explained visually.">
+<meta name="twitter:image" content="https://smartitbudget.github.io/autonomousIT-helpdesk/cover.png">
+<style>
+:root{--bg:#f6f8fc;--ink:#0f1b33;--mut:#5b6b88;--a:#2563eb;--b:#06b6d4;--g:#10b981;--o:#f59e0b;--bd:#e3e9f4}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 12% 8%,#dbeafe,transparent 40%),radial-gradient(circle at 92% 70%,#cffafe,transparent 40%);z-index:-1}
+header{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:12px;padding:10px 5vw;background:#ffffffe6;backdrop-filter:blur(8px);border-bottom:1px solid var(--bd)}
+#bar{position:absolute;left:0;bottom:-1px;height:3px;width:0;background:linear-gradient(90deg,var(--a),var(--b))}
+.logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--a),var(--b));display:grid;place-items:center;color:#fff;font-weight:800}
+header b{font-size:15px}nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+nav a{font-size:12px;padding:6px 11px;border-radius:99px;color:var(--mut);text-decoration:none}nav a.on{background:var(--a);color:#fff}
+section{padding:70px 6vw;max-width:1200px;margin:auto}
+h1{font-size:clamp(32px,5.4vw,64px);line-height:1.05;letter-spacing:-1.5px}
+h1 span,.gr{background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;color:transparent}
+h2{font-size:clamp(24px,3.2vw,38px);letter-spacing:-.5px;margin-bottom:8px}
+.lead{color:var(--mut);max-width:740px;margin:12px 0 22px;font-size:clamp(14px,1.5vw,18px);line-height:1.55}
+.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--a);font-weight:700;margin-bottom:8px}
+.hero{min-height:88vh;display:flex;align-items:center;gap:30px;position:relative}
+.orb{flex:0 0 min(30vw,320px);aspect-ratio:1;border-radius:50%;background:conic-gradient(var(--a),var(--b),var(--g),var(--a));animation:spin 12s linear infinite;display:grid;place-items:center}
+.orb:after{content:"🤖";font-size:80px;width:80%;height:80%;border-radius:50%;background:#fff;display:grid;place-items:center;animation:spin 12s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.btn{display:inline-block;border:0;border-radius:12px;padding:12px 20px;font-weight:700;font-size:14px;cursor:pointer;text-decoration:none;color:#fff;background:var(--a);transition:.2s}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px #2563eb44}.btn.l{background:#fff;color:var(--ink);border:1px solid var(--bd)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:#fff;border:1px solid var(--bd);border-radius:18px;padding:18px;box-shadow:0 6px 20px #1e3a8a0d;transition:.25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 14px 30px #2563eb22;border-color:var(--a)}
+.card h3{font-size:16px;margin:8px 0 4px}.card p{font-size:13px;color:var(--mut);line-height:1.5}.ic{font-size:28px}
+.rv{opacity:0;transform:translateY(30px);transition:.7s}.rv.in{opacity:1;transform:none}
+.stat{font-size:42px;font-weight:800;color:var(--a)}
+.bar{height:9px;border-radius:9px;background:#e8eefb;overflow:hidden;margin-top:10px}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--a),var(--b));transition:1.6s}.in .bar i{width:var(--w)}
+.flow{display:flex;gap:10px;flex-wrap:wrap}.st{flex:1;min-width:130px;text-align:center;background:#fff;border:2px solid var(--bd);border-radius:16px;padding:14px;cursor:pointer;transition:.2s}
+.st:hover{border-color:var(--b)}.st.on{border-color:var(--a);background:#eff6ff;box-shadow:0 0 0 5px #2563eb18;transform:scale(1.04)}.st .ic{display:block}.st b{font-size:13px}
+#det{margin-top:16px;background:#fff;border:1px solid var(--bd);border-radius:18px;padding:20px;display:grid;gap:18px;grid-template-columns:1fr 1fr}
+#det h3{font-size:20px;margin-bottom:8px}#det p{color:var(--mut);line-height:1.6;font-size:14px}#det ul{margin:8px 0 0 18px;font-size:13px;line-height:1.8}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}.tabs button,.chip{border:1px solid var(--bd);background:#fff;border-radius:99px;padding:8px 15px;cursor:pointer;font-size:13px}
+.tabs button.on,.chip.on{background:var(--ink);color:#fff}
+.term{background:#0f1b33;color:#b7f7d0;font:13px/1.8 ui-monospace,monospace;border-radius:16px;padding:18px;min-height:190px;white-space:pre-wrap}
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center}
+.calc label{display:block;font-size:13px;margin:12px 0 4px;color:var(--mut)}.calc input{width:100%;accent-color:var(--a)}
+.res{background:linear-gradient(135deg,var(--a),var(--b));color:#fff;border-radius:20px;padding:24px}.res b{font-size:38px;display:block}
+.cta{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.reach{display:flex;gap:14px;align-items:center;text-decoration:none;color:var(--ink);background:#fff;border:2px solid var(--a);border-radius:20px;padding:20px;position:relative;animation:glow 2s infinite;transition:.2s}.reach:hover{transform:scale(1.03)}
+.reach.s{border-color:#1e7b85}.reach b{font-size:17px}.reach small{display:block;color:var(--mut);font-size:12px;margin-top:3px;word-break:break-all}
+.pin{width:52px;height:52px;flex:none;border-radius:14px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:20px;background:#0a66c2}.s .pin{background:#1e7b85}
+.reach em{position:absolute;top:-12px;right:16px;background:var(--o);color:#fff;font-size:11px;font-style:normal;padding:3px 11px;border-radius:99px;animation:wob 1.2s infinite}
+@keyframes glow{50%{box-shadow:0 0 0 10px #2563eb22}}@keyframes wob{50%{transform:translateY(-4px)}}
+.share{display:flex;gap:8px;flex-wrap:wrap}.share a,.share button{border:0;border-radius:10px;padding:10px 15px;color:#fff;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;transition:.2s}.share a:hover,.share button:hover{transform:translateY(-3px)}
+#fab{position:fixed;right:18px;bottom:18px;z-index:30;width:52px;height:52px;border-radius:50%;border:0;background:var(--a);color:#fff;font-size:22px;cursor:pointer;box-shadow:0 8px 24px #2563eb66}
+#toast{position:fixed;bottom:84px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:8px 16px;border-radius:99px;font-size:13px;opacity:0;transition:.3s;z-index:40}
+footer{text-align:center;color:var(--mut);font-size:12px;padding:30px}
+@media(max-width:760px){.orb{display:none}nav{display:none}#det,.calc{grid-template-columns:1fr}}
+</style></head><body>
+<header><div class="logo">AI</div><b>AutonomousIT Helpdesk</b><nav id="nav"></nav><div id="bar"></div></header>
+
+<section id="home" class="hero"><div><div class="eyebrow">Self-healing IT service desk</div>
+<h1>The Helpdesk that <span>fixes itself</span></h1>
+<p class="lead">AutonomousIT understands each request, diagnoses the cause, runs the fix, verifies it and only calls a human when truly needed. Explore every part of this page: click, hover, slide and run the live demo.</p>
+<a class="btn" href="#demo">▶ Run live demo</a> <a class="btn l" href="#connect">Reach Mahendran</a>
+<div class="grid" style="margin-top:30px;max-width:640px"><div><div class="stat" data-n="70" data-s="%">0</div><small>Tier-1 auto-resolved</small></div><div><div class="stat" data-n="24" data-s="/7">0</div><small>Always-on coverage</small></div><div><div class="stat" data-n="90" data-s="s">0</div><small>Avg routine fix</small></div></div></div><div class="orb"></div></section>
+
+<section id="problem"><div class="eyebrow">The problem</div><h2>Why traditional helpdesks struggle</h2><p class="lead">Hover each card. Manual queues create delay, inconsistency and burnout.</p>
+<div class="grid">
+<div class="card rv"><div class="ic">⏳</div><h3>Slow first response</h3><p>Tickets wait for an agent; shift gaps add hours.</p><div class="bar"><i style="--w:85%"></i></div></div>
+<div class="card rv"><div class="ic">🔁</div><h3>Repetitive tickets</h3><p>Resets, unlocks and how-tos dominate volume.</p><div class="bar"><i style="--w:72%"></i></div></div>
+<div class="card rv"><div class="ic">🧩</div><h3>Knowledge silos</h3><p>Fixes live in people's heads or scattered docs.</p><div class="bar"><i style="--w:60%"></i></div></div>
+<div class="card rv"><div class="ic">📉</div><h3>Poor visibility</h3><p>No live view of SLA risk or recurring root causes.</p><div class="bar"><i style="--w:55%"></i></div></div>
+<div class="card rv"><div class="ic">😓</div><h3>Agent fatigue</h3><p>Skilled engineers stuck on low-value work.</p><div class="bar"><i style="--w:68%"></i></div></div></div></section>
+
+<section id="lifecycle"><div class="eyebrow">How it works</div><h2>The autonomous ticket lifecycle</h2><p class="lead">Click any stage to see what the agent does there.</p>
+<div class="flow" id="flow"></div><div id="det"></div></section>
+
+<section id="demo"><div class="eyebrow">Live demo</div><h2>Watch an incident resolve itself</h2><p class="lead">Choose a scenario; the agent runs it in real time.</p>
+<div class="tabs" id="tabs"></div><div class="term" id="term"></div></section>
+
+<section id="coverage"><div class="eyebrow">Coverage</div><h2>What the platform handles</h2><p class="lead">Filter by category.</p>
+<div class="tabs" id="flt"></div><div class="grid" id="cov"></div></section>
+
+<section id="roi"><div class="eyebrow">Impact</div><h2>Estimate your savings</h2><p class="lead">Slide the values to see the effect of autonomous resolution.</p>
+<div class="calc card"><div>
+<label>Tickets per month: <b id="v1">2000</b></label><input id="s1" type="range" min="200" max="20000" step="100" value="2000">
+<label>Cost per manual ticket ($): <b id="v2">18</b></label><input id="s2" type="range" min="5" max="60" value="18">
+<label>Auto-resolution rate (%): <b id="v3">70</b></label><input id="s3" type="range" min="10" max="90" value="70"></div>
+<div class="res"><small>Estimated monthly saving</small><b id="o1">$0</b><small>Tickets handled with no human</small><b id="o2" style="font-size:28px">0</b><small>Agent hours freed (≈10 min each)</small><b id="o3" style="font-size:28px">0</b></div></div></section>
+
+<section id="safety"><div class="eyebrow">Trust</div><h2>Governance &amp; safety built in</h2><p class="lead">Autonomy with guardrails.</p>
+<div class="grid">
+<div class="card rv"><div class="ic">🛡️</div><h3>Approved runbooks only</h3><p>Only pre-approved, tested actions can run.</p></div>
+<div class="card rv"><div class="ic">👤</div><h3>Human in the loop</h3><p>High-risk changes need approval first.</p></div>
+<div class="card rv"><div class="ic">🧾</div><h3>Full audit trail</h3><p>Every decision, command and result is logged.</p></div>
+<div class="card rv"><div class="ic">↩️</div><h3>Auto rollback</h3><p>Reverts automatically if verification fails.</p></div></div></section>
+
+<section id="connect"><div class="eyebrow">Get in touch</div><h2>Let's <span class="gr">connect</span></h2><p class="lead">Interested in AutonomousIT or IT automation? Reach me directly:</p>
+<div class="cta">
+<a class="reach" target="_blank" rel="noopener" href="https://www.linkedin.com/in/mahendranvaradharajan/"><em>👋 Reach me here</em><div class="pin">in</div><div><b>LinkedIn – Mahendran Varadharajan</b><small>linkedin.com/in/mahendranvaradharajan</small></div></a>
+<a class="reach s" target="_blank" rel="noopener" href="https://www.scribd.com/document/1094326085/Mahendran-Varadharajan-Resume-pdf"><em>📄 View my resume</em><div class="pin">S</div><div><b>Resume on Scribd</b><small>scribd.com/document/1094326085/Mahendran-Varadharajan-Resume-pdf</small></div></a></div>
+<h2 style="margin:34px 0 12px;font-size:22px">Share this page everywhere</h2><div class="share" id="share"></div></section>
+<footer>© AutonomousIT Helpdesk · Mahendran Varadharajan · smartitbudget.github.io/autonomousIT-helpdesk</footer>
+<button id="fab" title="Share">📤</button><div id="toast"></div>
+<script>
+const $=s=>document.querySelector(s),U="https://smartitbudget.github.io/autonomousIT-helpdesk",T="AutonomousIT Helpdesk – Self-Healing IT Support",X="Watch how an AI-driven helpdesk triages, resolves and escalates IT tickets automatically.";
+const secs=[["home","Home"],["problem","Problem"],["lifecycle","Lifecycle"],["demo","Demo"],["coverage","Coverage"],["roi","Savings"],["safety","Safety"],["connect","Connect"]];
+secs.forEach(([id,n])=>{nav.insertAdjacentHTML('beforeend',`<a href="#${id}">${n}</a>`)});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');if(e.target.querySelector&&e.target.querySelector('.stat'))cnt(e.target)}}),{threshold:.2});
+document.querySelectorAll('.rv,.hero').forEach(e=>io.observe(e));
+function cnt(r){r.querySelectorAll('.stat').forEach(e=>{if(e.d)return;e.d=1;let n=+e.dataset.n,c=0;const i=setInterval(()=>{c+=n/40;if(c>=n){c=n;clearInterval(i)}e.textContent=Math.round(c)+e.dataset.s},30)})}
+addEventListener('scroll',()=>{const d=document.documentElement;bar.style.width=scrollY/(d.scrollHeight-innerHeight)*100+"%";let cur=secs[0][0];secs.forEach(([id])=>{if(document.getElementById(id).getBoundingClientRect().top<150)cur=id});document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.hash=="#"+cur))});
+const ST=[["📥","Intake","Every request lands in one unified queue.",["Email, chat, Teams, Slack, portal, voice","Auto-create ticket with user and asset","Duplicate detection"]],["🧠","Understand","NLP reads the request like an experienced agent.",["Intent and urgency scoring","Sentiment and VIP detection","Category and priority assignment"]],["🔍","Diagnose","The agent gathers evidence automatically.",["CMDB and asset lookup","Monitoring, logs and identity checks","Similar past incident matching"]],["⚙️","Remediate","Approved runbooks execute the fix.",["Unlock, reset, restart, reinstall","Provision access with approvals","Every step logged"]],["✅","Verify","The fix is proven before closing.",["Automated health check","User confirmation prompt","Rollback on failure"]],["📚","Learn","Each resolution improves the next.",["Update knowledge base","Flag recurring problems","Suggest new runbooks"]]];
+ST.forEach((s,i)=>flow.insertAdjacentHTML('beforeend',`<div class="st" data-i="${i}"><span class="ic">${s[0]}</span><b>${i+1}. ${s[1]}</b></div>`));
+function pick(i){document.querySelectorAll('.st').forEach((e,j)=>e.classList.toggle('on',j==i));const s=ST[i];det.innerHTML=`<div><h3>${s[0]} ${s[1]}</h3><p>${s[2]}</p><ul>${s[3].map(x=>`<li>${x}</li>`).join('')}</ul></div><div class="term" style="min-height:0">$ stage ${i+1}/6 → ${s[1].toLowerCase()}\nstatus: active\nautomation: ${[100,95,90,85,95,100][i]}%</div>`}
+flow.onclick=e=>{const s=e.target.closest('.st');if(s)pick(+s.dataset.i)};pick(0);
+const SC={"Password reset":["[09:01:02] Ticket #4821 received via Teams","[09:01:02] Intent: password_reset · user a.khan","[09:01:03] Identity check: MFA push approved ✔","[09:01:04] Runbook RB-017 → reset AD password","[09:01:06] Login test passed ✔","[09:01:07] Closed in 5s · KB updated"],"VPN down":["[10:14:10] Ticket #4822: VPN timeout","[10:14:11] Gateway healthy; client profile stale","[10:14:13] Runbook RB-042 → re-push VPN profile","[10:14:20] Tunnel up, latency 38ms ✔","[10:14:21] Closed in 11s"],"Server alert":["[02:03:44] Alert: disk 96% on APP-07","[02:03:45] Correlated: log growth since 01:40","[02:03:47] Policy: low risk → auto","[02:03:52] Rotated logs, freed 31GB ✔","[02:03:53] Problem record opened"],"Needs human":["[11:20:01] Ticket #4830: payroll app error","[11:20:03] Confidence 41% · business-critical","[11:20:04] No safe runbook found","[11:20:05] Escalated to Apps L2 with diagnostics","[11:20:05] SLA 30 min · user notified"]};
+let cur="Password reset",tv;Object.keys(SC).forEach(k=>{const b=document.createElement('button');b.textContent="▶ "+k;b.onclick=()=>{cur=k;run()};tabs.appendChild(b)});
+function run(){clearInterval(tv);[...tabs.children].forEach(b=>b.classList.toggle('on',b.textContent=="▶ "+cur));term.textContent="";let k=0;tv=setInterval(()=>{if(k>=SC[cur].length)return clearInterval(tv);term.textContent+=SC[cur][k++]+"\n"},650)}run();
+const CV=[["Identity","🔐","Identity & access","Password resets, MFA re-enrolment, unlocks, licence and group requests."],["Endpoint","💻","Endpoint care","Patching, disk cleanup, app installs, device health scoring."],["Cloud","☁️","Cloud & SaaS","Microsoft 365, Google Workspace, AWS, Azure onboarding."],["Network","🌐","Network","Wi-Fi, DNS, VPN and printer diagnostics."],["Endpoint","🖨️","Printers","Queue clearing, driver repair, reconnection."],["Identity","🆕","Onboarding","New joiner accounts, apps and hardware in minutes."],["Cloud","📊","Analytics","Deflection rate, CSAT, SLA risk and cost per ticket."]];
+["All","Identity","Endpoint","Cloud","Network"].forEach((c,i)=>{const b=document.createElement('button');b.className="chip"+(i?"":" on");b.textContent=c;b.onclick=()=>{[...flt.children].forEach(x=>x.classList.toggle('on',x==b));cov.innerHTML=CV.filter(v=>c=="All"||v[0]==c).map(v=>`<div class="card"><div class="ic">${v[1]}</div><h3>${v[2]}</h3><p>${v[3]}</p></div>`).join('')};flt.appendChild(b)});flt.firstChild.click();
+function calc(){const t=+s1.value,c=+s2.value,r=+s3.value/100;v1.textContent=t;v2.textContent=c;v3.textContent=s3.value;const n=Math.round(t*r);o1.textContent="$"+Math.round(n*c*.9).toLocaleString();o2.textContent=n.toLocaleString();o3.textContent=Math.round(n/6).toLocaleString()+" h"}
+[s1,s2,s3].forEach(s=>s.oninput=calc);calc();
+const SH=[["LinkedIn","#0a66c2",(u)=>"https://www.linkedin.com/sharing/share-offsite/?url="+u],["X / Twitter","#111",(u,t)=>"https://twitter.com/intent/tweet?url="+u+"&text="+t],["Facebook","#1877f2",u=>"https://www.facebook.com/sharer/sharer.php?u="+u],["WhatsApp","#25d366",(u,t)=>"https://wa.me/?text="+t+"%20"+u],["Telegram","#229ed9",(u,t)=>"https://t.me/share/url?url="+u+"&text="+t],["Reddit","#ff4500",(u,t)=>"https://www.reddit.com/submit?url="+u+"&title="+t],["Pinterest","#e60023",(u,t)=>"https://pinterest.com/pin/create/button/?url="+u+"&description="+t+"&media="+encodeURIComponent(U+"/cover.png")],["Email","#6b7280",(u,t)=>"mailto:?subject="+t+"&body="+u]];
+const eu=encodeURIComponent(U),et=encodeURIComponent(T);SH.forEach(([n,c,f])=>share.insertAdjacentHTML('beforeend',`<a style="background:${c}" target="_blank" rel="noopener" href="${f(eu,et)}">${n}</a>`));
+async function ns(){if(navigator.share){try{await navigator.share({title:T,text:X,url:U})}catch(e){}}else{navigator.clipboard&&navigator.clipboard.writeText(U);toast("GitHub page link copied")}}
+share.insertAdjacentHTML('afterbegin','<button id="nb" style="background:var(--a)">📤 Share (all apps)</button>');nb.onclick=ns;fab.onclick=ns;
+function toast(m){toast_.textContent=m;toast_.style.opacity=1;setTimeout(()=>toast_.style.opacity=0,1800)}const toast_=document.getElementById('toast');
+</script></body></html>
